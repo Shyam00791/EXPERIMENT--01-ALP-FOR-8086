@@ -78,26 +78,187 @@ Running The Emulator (emu8086) Intro 8086 Microprocessor Emulator, also known as
 ## Programs for arithmetic  operations
 
 ## Addition  of 8 bit ALP 
-
-
+```
+MOV CL,00
+MOV AX,[3001H]
+MOV BX,[3003H]
+ADD AX,BX
+JNC Loop
+INC CL
+Loop:
+MOV [3005H],AX
+MOV [3007H],CL
+HLT
+```
 
 ## Output  
+<img width="2559" height="1599" alt="image" src="https://github.com/user-attachments/assets/53005cb3-00bd-4113-ada3-35491603d5cf" />
+
  
 ## Subtraction   of 8 bit numbers  ALP 
+```
+MOV CL,00
+MOV AX,[3001H]
+MOV BX,[3003H]
+SUB AX,BX
+JNC Loop
+INC CL  
+NOT AX
+INC AX
+Loop:
+MOV [3005H],AX
+MOV [3007H],CL
+HLT
+```
  
-## Output  
+## Output 
+
+<img width="2555" height="1599" alt="image" src="https://github.com/user-attachments/assets/37e0098e-70be-40d7-a077-ca19ac5c88d0" />
+
 ## Multiplication alp 
+
+```
+MOV AX,[3001H]
+MOV BX,[3003H]
+MUL BX
+MOV [3005H],AX
+MOV [3007H],DX
+HLT
+```
+
  ## Output  
+<img width="2557" height="1599" alt="image" src="https://github.com/user-attachments/assets/8768ef9a-7eb1-4d63-aeb6-5a554d944f66" />
 
 
 ## Division alp 
 
+```
+MOV AX,[3001H]
+MOV BX,[3003H]
+DIV BX
+MOV [3005H],AX
+MOV [3007H],DX
+HLT
+```
 ## Output  
+
+<img width="2559" height="1599" alt="image" src="https://github.com/user-attachments/assets/e8bd257d-588d-4016-a566-3a2f56fa0281" />
+
+LOGICAL OPERATIONS
+
+TRUTH TABLE FOR LOGICAL OPERATIONS
+
+<img width="1957" height="1717" alt="image" src="https://github.com/user-attachments/assets/b77f4a3f-8a01-48dc-8001-7c0bf3ecca2b" />
+
+AND alp
+
+```
+MOV AX,[3001H]
+MOV BX,[3003H]
+AND AX,BX
+MOV [3005H],AX
+HLT
+```
+
+Output
+
+<img width="2559" height="1599" alt="image" src="https://github.com/user-attachments/assets/61f38199-a96f-446f-8f41-18a226817d2c" />
+
+OR alp
+```
+MOV AX,[3001H]
+MOV BX,[3003H]
+OR AX,BX
+MOV [3005H],AX
+HLT
+```
+
+Output
+
+<img width="2559" height="1570" alt="image" src="https://github.com/user-attachments/assets/521638d4-d4b3-4901-a6cb-b6e0caf1e429" />
+
+
+NAND alp
+
+```
+MOV AX,[3001H]
+MOV BX,[3003H]
+AND AX,BX
+NOT AX
+MOV [3005H],AX
+HLT
+```
+
+Output
+
+<img width="2559" height="1599" alt="image" src="https://github.com/user-attachments/assets/fa3f5ffe-4f59-4eaf-b822-ed06b9de2820" />
+
+NOR alp
+
+```
+MOV AX,[3001H]
+MOV BX,[3003H]
+OR AX,BX
+NOT AX
+MOV [3005H],AX
+HLT
+```
+
+Output
+
+<img width="2559" height="1596" alt="image" src="https://github.com/user-attachments/assets/349206e0-4d70-430e-a77d-f31caf6a1642" />
+
+NOT alp
+
+```
+MOV AX,[3001H]
+MOV BX,[3003H]
+NOT AX
+MOV [3005H],AX
+HLT
+```
+
+Output
+
+
+<img width="2544" height="1599" alt="image" src="https://github.com/user-attachments/assets/6add7446-aa79-41ad-9f71-97680b975934" />
+
+XOR alp
+
+```
+MOV AX,[3001H]
+MOV BX,[3003H]
+XOR AX,BX
+MOV [3005H],AX
+HLT
+```
+
+Output
+
+
+<img width="2559" height="1599" alt="image" src="https://github.com/user-attachments/assets/49d33bd4-77b3-4982-babc-f42bdb5984b0" />
+
+XNOR alp
+
+```
+MOV AX,[3001H]
+MOV BX,[3003H]
+XOR AX,BX
+NOT AX
+MOV [3005H],AX
+HLT
+```
+
+Output
+
+
+<img width="2559" height="1599" alt="image" src="https://github.com/user-attachments/assets/01d537cb-8e91-4f06-8c86-ae0ed796290e" />
+
 
 
 ## Result :
  
-
+The Write and execute ALP on fundamental arithmetic and logical operations is executed successfully.
 
 
 
